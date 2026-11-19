@@ -1,22 +1,19 @@
-MENTE MAESTRA — PROTOTIPO WEB INSTALABLE
+MENTE MAESTRA 2.0
 
-Esta es la primera versión funcional del proyecto.
+Versión web progresiva (PWA) con identidad visual renovada.
+
 Incluye:
-- Interfaz oscura en negro/azul y dorado.
-- Siete categorías educativas.
-- Preguntas con alternativas y explicaciones.
-- Experiencia, nivel, respuestas y racha guardados localmente.
-- Diseño adaptable a móviles.
-- Manifiesto PWA y caché para uso sin conexión tras la primera carga.
+- 12 territorios de conocimiento y preguntas con explicaciones.
+- Modo Todo un poco, por categoría, Supervivencia y Contrarreloj.
+- Desafío diario con selección estable para cada fecha.
+- Experiencia, nivel, respuestas y racha guardados en el dispositivo.
+- Diseño adaptable a celulares y escritorio.
 
-PARA PROBAR:
-1. Descomprime el ZIP.
-2. Publica el contenido completo en un hosting HTTPS estático (por ejemplo, GitHub Pages o Netlify).
-3. Abre la dirección desde Chrome en Android.
-4. Usa el menú de Chrome > "Instalar aplicación" o "Añadir a pantalla de inicio".
+PUBLICACIÓN
+Sube los archivos de esta carpeta a la raíz del repositorio GitHub, reemplazando los archivos con el mismo nombre. Conserva README.md si ya existe.
+GitHub Pages publicará la actualización automáticamente después del commit.
 
-IMPORTANTE:
-Este paquete es una PWA (aplicación web instalable), no un APK nativo todavía.
-Para generar un APK se necesita empaquetar el proyecto con una herramienta Android como Capacitor y compilarlo con Android Studio.
+IMPORTANTE
+El modo online aparece como función en desarrollo. Las partidas reales entre dos dispositivos requieren un backend, salas sincronizadas y gestión de usuarios; todavía no está activado en esta versión.
 
-Iconos PNG 192x192 y 512x512 añadidos para mejorar la instalación PWA en Android.
+Archivos: index.html, styles.css, app.js, manifest.json, sw.js, icon.svg, icon-192.png, icon-512.png y README.txt.

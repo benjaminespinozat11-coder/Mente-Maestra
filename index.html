@@ -1,61 +1,45 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#101827">
-  <meta name="description" content="Aprende jugando con Mente Maestra.">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <title>Mente Maestra</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a1020"><meta name="description" content="Mente Maestra: explora, piensa y supera nuevos desafíos.">
+  <link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <title>Mente Maestra — El conocimiento es tu ventaja</title>
 </head>
 <body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
   <header class="topbar">
-    <div class="brand-mark">MM</div>
-    <div><div class="brand">MENTE MAESTRA</div><div class="tagline">Cada pregunta te hace avanzar.</div></div>
-    <div class="level-pill" id="levelPill">Nivel 1</div>
+    <a class="brand-lockup" href="#inicio" aria-label="Mente Maestra, inicio"><span class="brand-symbol"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 42 14v20L24 44 6 34V14L24 4Z"/><path d="M15 29V18l9-5 9 5v11l-9 5-9-5Z"/><path d="m18 24 4 4 8-9"/></svg></span><span><b>MENTE <em>MAESTRA</em></b><small>EL CONOCIMIENTO ES TU VENTAJA</small></span></a>
+    <div class="top-actions"><span class="level-pill" id="levelPill">NIVEL 1</span><button class="icon-button" id="profileBtn" aria-label="Ver perfil">◎</button></div>
   </header>
-
-  <main>
-    <section class="hero">
-      <p class="eyebrow">TU ESPACIO DE APRENDIZAJE</p>
-      <h1>Entrena tu<br><span>curiosidad.</span></h1>
-      <p class="muted">Aprende desde cero, avanza a tu ritmo y descubre algo nuevo cada día.</p>
-      <div class="stats">
-        <div><strong id="xp">0</strong><small>EXPERIENCIA</small></div>
-        <div><strong id="done">0</strong><small>RESPUESTAS</small></div>
-        <div><strong id="streak">0</strong><small>RACHA</small></div>
+  <main id="inicio">
+    <section class="hero panel">
+      <div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> CENTRO DE CONOCIMIENTO</p><h1>Tu mente.<br><span>Sin límites.</span></h1><p class="hero-sub">Cada respuesta abre una puerta. Explora nuevos temas, supera desafíos y construye tu propio récord.</p>
+        <div class="hero-actions"><button class="button button-gold" id="playMix"><span>✦</span> Jugar ahora</button><button class="button button-quiet" id="dailyBtn">Desafío diario <span>↗</span></button></div>
+      </div>
+      <div class="orbit-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit-core"><svg viewBox="0 0 100 100"><path d="M50 12 82 30v40L50 88 18 70V30L50 12Z"/><path d="M32 58V40l18-10 18 10v18L50 68 32 58Z"/><path d="m38 49 8 8 17-19"/></svg></div><i class="orbit-dot dot-a"></i><i class="orbit-dot dot-b"></i><i class="orbit-dot dot-c"></i></div>
+      <div class="hero-index">MM <span>·</span> 02.0</div>
+    </section>
+    <section class="stats-grid" aria-label="Tu progreso">
+      <article class="stat-card"><span class="stat-icon">✧</span><div><strong id="xp">0</strong><small>EXPERIENCIA</small></div></article>
+      <article class="stat-card"><span class="stat-icon">◈</span><div><strong id="done">0</strong><small>RESPUESTAS</small></div></article>
+      <article class="stat-card"><span class="stat-icon">⌁</span><div><strong id="streak">0</strong><small>RACHA ACTUAL</small></div></article>
+    </section>
+    <section class="section-block progress-section"><div class="section-title"><div><p class="eyebrow">TU EVOLUCIÓN</p><h2>Progreso de nivel</h2></div><span class="muted-label" id="progressText">0 / 100 XP</span></div><div class="progress-track"><div id="progressBar"></div></div></section>
+    <section class="section-block"><div class="section-title"><div><p class="eyebrow">ELIGE TU EXPERIENCIA</p><h2>Modos de juego</h2></div></div>
+      <div class="mode-grid">
+        <button class="mode-card mode-featured" id="modeMix"><span class="mode-icon">✳</span><span class="mode-tag">RECOMENDADO</span><b>Todo un poco</b><small>Preguntas de todas las categorías.</small><span class="mode-arrow">↗</span></button>
+        <button class="mode-card" id="modeSurvival"><span class="mode-icon">◉</span><b>Supervivencia</b><small>¿Cuánto puedes avanzar sin fallar?</small><span class="mode-arrow">↗</span></button>
+        <button class="mode-card" id="modeTimed"><span class="mode-icon">◷</span><b>Contrarreloj</b><small>10 preguntas. El tiempo corre.</small><span class="mode-arrow">↗</span></button>
+        <button class="mode-card mode-online" id="modeOnline"><span class="mode-icon">⌘</span><span class="online-tag">EN DESARROLLO</span><b>Desafío online</b><small>Invita a alguien y compitan.</small><span class="mode-arrow">↗</span></button>
       </div>
     </section>
-
-    <section class="section">
-      <div class="section-heading"><div><p class="eyebrow">RUTA PROGRESIVA</p><h2>Tu aprendizaje</h2></div><span class="muted small">Nivel inicial</span></div>
-      <div class="progress-track"><div id="progressBar"></div></div>
-      <p class="muted small" id="progressText">Completa preguntas para ganar experiencia.</p>
-    </section>
-
-    <section class="section">
-      <p class="eyebrow">ELIGE TU CAMINO</p><h2>Categorías</h2>
-      <div class="category-grid" id="categories"></div>
-    </section>
-
-    <section class="section quiz hidden" id="quiz">
-      <div class="quiz-head"><span class="eyebrow" id="quizCategory">CATEGORÍA</span><button class="ghost" id="closeQuiz">Salir</button></div>
-      <div class="question-count" id="questionCount"></div>
-      <h2 id="question">Pregunta</h2>
-      <div class="answers" id="answers"></div>
-      <div class="explanation hidden" id="explanation"></div>
-      <button class="primary hidden" id="nextBtn">Siguiente pregunta →</button>
-    </section>
-
-    <section class="section lesson">
-      <p class="eyebrow">CONSEJO DE ESTUDIO</p>
-      <h2>Aprender también es equivocarse.</h2>
-      <p class="muted">Después de cada respuesta encontrarás una explicación. No se trata solo de acertar: se trata de comprender.</p>
-    </section>
+    <section class="section-block"><div class="section-title"><div><p class="eyebrow">MAPA DEL CONOCIMIENTO</p><h2>Explora territorios</h2></div><span class="muted-label" id="categoryCount">12 territorios</span></div><div class="category-grid" id="categories"></div></section>
+    <section class="section-block daily-strip"><div class="daily-mark">✦</div><div><p class="eyebrow">UNA MISIÓN CADA DÍA</p><h3>Un pequeño reto. Un gran avance.</h3><p>Vuelve mañana para descubrir una nueva selección de preguntas.</p></div><button class="round-arrow" id="dailyBtn2" aria-label="Abrir desafío diario">↗</button></section>
+    <section class="quiz panel hidden" id="quiz"><div class="quiz-top"><div><p class="eyebrow" id="quizMode">RONDA DE CONOCIMIENTO</p><span class="question-count" id="questionCount">PREGUNTA 1 DE 10</span></div><button class="icon-button" id="closeQuiz" aria-label="Cerrar partida">×</button></div><div class="quiz-meta"><span id="quizCategory">CULTURA GENERAL</span><span id="timer" class="timer hidden">20</span></div><h2 id="question">Pregunta</h2><div class="answers" id="answers"></div><div class="explanation hidden" id="explanation"></div><div class="quiz-footer"><span id="roundScore">✧ 0 XP</span><button class="button button-gold hidden" id="nextBtn">Continuar <span>→</span></button></div></section>
+    <section class="section-block online-note"><span class="online-orb">⌘</span><div><p class="eyebrow">PRÓXIMAMENTE</p><h3>La mente también compite.</h3><p>Estamos preparando las partidas privadas para que puedas retar a tus amigos y familiares.</p></div></section>
   </main>
-  <footer>MENTE MAESTRA <span>·</span> VERSIÓN 1.0</footer>
+  <footer><span class="footer-mark">MM</span><span>MENTE MAESTRA</span><small>APRENDE · DESCUBRE · SUPERA</small></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="app.js"></script>
-</body>
-</html>
+</body></html>
