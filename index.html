@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Aprende jugando con Mente Maestra.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Mente Maestra</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">MM</div>
+    <div><div class="brand">MENTE MAESTRA</div><div class="tagline">Cada pregunta te hace avanzar.</div></div>
+    <div class="level-pill" id="levelPill">Nivel 1</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">TU ESPACIO DE APRENDIZAJE</p>
+      <h1>Entrena tu<br><span>curiosidad.</span></h1>
+      <p class="muted">Aprende desde cero, avanza a tu ritmo y descubre algo nuevo cada día.</p>
+      <div class="stats">
+        <div><strong id="xp">0</strong><small>EXPERIENCIA</small></div>
+        <div><strong id="done">0</strong><small>RESPUESTAS</small></div>
+        <div><strong id="streak">0</strong><small>RACHA</small></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><div><p class="eyebrow">RUTA PROGRESIVA</p><h2>Tu aprendizaje</h2></div><span class="muted small">Nivel inicial</span></div>
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <p class="muted small" id="progressText">Completa preguntas para ganar experiencia.</p>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">ELIGE TU CAMINO</p><h2>Categorías</h2>
+      <div class="category-grid" id="categories"></div>
+    </section>
+
+    <section class="section quiz hidden" id="quiz">
+      <div class="quiz-head"><span class="eyebrow" id="quizCategory">CATEGORÍA</span><button class="ghost" id="closeQuiz">Salir</button></div>
+      <div class="question-count" id="questionCount"></div>
+      <h2 id="question">Pregunta</h2>
+      <div class="answers" id="answers"></div>
+      <div class="explanation hidden" id="explanation"></div>
+      <button class="primary hidden" id="nextBtn">Siguiente pregunta →</button>
+    </section>
+
+    <section class="section lesson">
+      <p class="eyebrow">CONSEJO DE ESTUDIO</p>
+      <h2>Aprender también es equivocarse.</h2>
+      <p class="muted">Después de cada respuesta encontrarás una explicación. No se trata solo de acertar: se trata de comprender.</p>
+    </section>
+  </main>
+  <footer>MENTE MAESTRA <span>·</span> VERSIÓN 1.0</footer>
+  <script src="app.js"></script>
+</body>
+</html>
